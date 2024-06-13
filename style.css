@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root{
+    --main-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+main{
+    display: grid;
+    grid-template: 1fr / 2fr 3fr;
+    height: 100vh;
+}
+fieldset{
+    border: 0;
+    display: flex;
+    gap: 50px;
+}
+.top{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+#background{
+    background-image: url(island.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+input{
+    display: block;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: "Lato";
+    font-weight: 400;
+}
+label{
+    display: block;
+    font-size: 10px;
+    font-family: "Roboto";
+    color: darkslategray;
+    font-weight: bold;
+    letter-spacing: .05rem;
+}
+input{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 20vw;
+    height: 25px;
+    background-color: rgb(252, 251, 251);
+}
+h6{
+    font-size: 25px;
+    font-family: var(--main-font);
+    margin: 0;
+    font-weight: 500;
+}
+.top{
+    background-color: white;
+    box-shadow: 0px 5px 5px lightgray;
+    padding: 10px;
+    margin: 30px 0;
+    border: 1px solid lightgray;
+    padding-bottom: 20px;
+}
+.top, #text, #bottom{
+    padding-left: 30px;
+}
+#form{
+    background-color: rgb(240, 240, 240);
+}
+#text{
+    margin: 50px 0;
+}
+.italic{
+    font-style: italic;
+}
+.top > .big-text{
+    margin-left: 14px;
+}
+button{
+    background-color: rgba(40, 104, 40, 100);
+    padding: 12px 60px;
+    color: white;
+    font-family: var(--main-font);
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+button, #text, p{
+    margin-left: 14px;
+}
+p, #login{
+    font-size: 15;
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+#login{
+    text-decoration: none;
+    color: rgba(40, 104, 40, 100);
+    font-weight: bold;
+}
+@font-face{
+    font-family: Norse-bold;
+    src: url(Norse-Bold.otf);
+}
+#logo{
+    background-color: black;
+    opacity: 70%;
+    font-family: Norse-bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    margin: 100px 0;
+}
+h1{
+    margin: 0;
+    color: white;
+    font-size: 90px;
+}
+img{
+    opacity: 100%;
+    height: 110px;
+    width: auto;
+}
+footer{
+    margin-bottom: 10px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 5px;
+    font-family: var(--main-font);
+    cursor: pointer;
+}
+footer a{
+    color: black;
+}
+input:focus{
+    border:1px solid blue;
+    outline: none;
+    box-shadow: 5px 5px 5px gray;
+}
+footer:hover{
+    opacity: 0.5;
+}
+input:invalid{
+    color: red;
+}
+.alert{
+    font-size: 12x;
+    color: red;
+    font-family: "Lato";
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 20vw;
+    text-wrap: wrap;
+}
+label{
+    text-transform: uppercase;
+}
+input#first-name:invalid + p::after, input#last-name:invalid + p::after{
+    content: "* Please write a name";
+}
+input#email:invalid + p::after{
+    content: "* Please write a valid email";
+}
+input#phone:invalid + p::after{
+    content: "* Please provide a valid 10 digit phone number";
+}
+input#password:invalid + p::after{
+    content: "* Password must contain at least one uppercase letter, at least one lowercase letter, at least one number, and must be 8 characters long.";
+}
+.not-matching{
+    content: "* Passwords do not match";
+}
